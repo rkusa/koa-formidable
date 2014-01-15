@@ -1,0 +1,29 @@
+{
+  "name": "koa-formidable",
+  "author": {
+    "name": "Markus Ast",
+    "email": "npm.m@rkusa.st"
+  },
+  "version": "0.1.0",
+  "description": "Formidable middleware for Koa",
+  "keywords": [
+    "koa",
+    "formidable",
+    "form",
+    "upload",
+    "multipart",
+    "bodyparser"
+  ],
+  "homepage": "https://github.com/rkusa/koa-formidable",
+  "dependencies": {
+    "formidable": "~1.0.14"
+  },
+  "bugs": "https://github.com/rkusa/koa-formidable/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rkusa/koa-formidable.git"
+  },
+  "engines": {
+    "node": ">=0.8"
+  }
+}
