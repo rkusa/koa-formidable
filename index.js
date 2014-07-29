@@ -1,10 +1,12 @@
+'use strict'
+
 var formidable = require('formidable')
 
 var middleware = module.exports = function(opts) {
   return function *formidable(next) {
     var res = yield middleware.parse(opts, this)
-    this.req.body = res.fields
-    this.req.files = res.files
+    this.request.body = res.fields
+    this.request.files = res.files
     yield next
   }
 }
@@ -14,7 +16,7 @@ middleware.parse = function(opts, ctx) {
     ctx = opts
     opts = {}
   }
-  
+
   return function(done) {
     var form = opts instanceof formidable.IncomingForm
       ? opts
@@ -24,4 +26,4 @@ middleware.parse = function(opts, ctx) {
       done(null, { fields: fields, files: files })
     })
   }
-} 
+}
