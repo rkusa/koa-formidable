@@ -1,7 +1,7 @@
 var formidable = require('formidable')
 
 var middleware = module.exports = function(opts) {
-  return function*(next) {
+  return function *formidable(next) {
     var res = yield middleware.parse(opts, this)
     this.req.body = res.fields
     this.req.files = res.files
