@@ -2,10 +2,10 @@
 
 [Formidable](https://github.com/felixge/node-formidable) middleware for Koa
 
-```json
-{ "name": "koa-formidable",
-  "version": "0.1.0" }
-```
+[![NPM][npm]](https://npmjs.org/package/koa-formidable)
+[![Dependency Status][dependencies]](https://david-dm.org/rkusa/koa-formidable)
+
+**Breaking Change in 1.0.0:** both `body` and `files` are now added to Koa's `.request` instead of modifying the http request (`.req`) directly.
 
 ## API
 
@@ -13,7 +13,7 @@
 
 ### formidable(opts)
 
-Returns the formidable middleware that parses the incoming request and adds the `.req.body` and `.req.files` to the context.
+Returns the formidable middleware that parses the incoming request and adds the `.request.body` and `.request.files` to the context.
 
 **Arguments:**
 
@@ -66,3 +66,6 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[npm]: http://img.shields.io/npm/v/koa-formidable.svg?style=flat
+[dependencies]: http://img.shields.io/david/rkusa/koa-formidable.svg?style=flat
