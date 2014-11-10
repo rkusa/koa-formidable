@@ -16,7 +16,7 @@
   ],
   "homepage": "https://github.com/rkusa/koa-formidable",
   "dependencies": {
-    "formidable": "~1.0.14"
+    "formidable": "~1.0.15"
   },
   "bugs": "https://github.com/rkusa/koa-formidable/issues",
   "repository": {
